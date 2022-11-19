@@ -19,7 +19,7 @@ You can either clone this repository or download `.zip` file and extract it unde
 ### 3. Import database
 
 Import [daily_blog.sql](./daily_blog.sql) file to new database created in phpmyadmin.
-Here is a step by step guide. You can use [this link](https://scribehow.com/shared/phpmyadmin__import_database__VwNDP7JKTm2oZ5RiKvzHhQ) or see [this file](./readme_files/phpmyadmin_import_database.pdf.pdf).
+Here is a step by step guide. You can use [this link](https://scribehow.com/shared/phpmyadmin__import_database__VwNDP7JKTm2oZ5RiKvzHhQ) or see [this file](./readme_files/phpmyadmin_import_database.pdf).
 
 ### 4. Access files
 

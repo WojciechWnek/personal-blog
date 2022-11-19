@@ -28,3 +28,11 @@ In a web rowser of your choisce in a search bar type `localhost\personal-blog` o
 ## Documentation
 
 To see aplication's main features navigate to [this link](https://scribehow.com/shared/Daily_blog_features__3J9n_eicQvGYodoNIoLitg) or see <a href="./readme_files/Daily_blog_features.pdf" download>this file (pdf)</a>.
+
+## Credentials
+
+To log in use
+```
+email: wojciech@wnek.com
+password: wnek1234
+```

@@ -1,12 +1,17 @@
 <?php
 session_start();
 
-if(isset($_SESSION['logged']) && $_SESSION['logged'] == true){
-    header('Location: add_post_page.php');
+if(!isset($_SESSION['logged'])){
+    header('Location: index.php');
     exit();
 }
+
+$id = $_POST['id']; 
+$title = $_POST['title'];
+$content = $_POST['content'];
+
 ?>
-    
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,7 +26,6 @@ if(isset($_SESSION['logged']) && $_SESSION['logged'] == true){
         textarea{
             height: 10rem;
         }
-
         .validation{
             height: 30px;
 
@@ -36,45 +40,41 @@ if(isset($_SESSION['logged']) && $_SESSION['logged'] == true){
 </head>
 <body>
     <div class="container">
-        <row class="d-flex justify-content-end p-5">
+        <row class="d-flex justify-content-between p-5">
             <p><a href="index.php" class="text-secondary"><u>STRONA GŁÓWNA</u></a></p>
+            <p><a href="logout.php" class="text-secondary"><u>WYLOGUJ</u></a></p>
         </row>
         <row class="d-flex justify-content-center p-3">
-            <P class="text-primary fw-bold h1">PANEL LOGOWANIA</P>
+            <P class="text-primary fw-bold h1"> EDYTUJ WPIS Z DNIA </P>
         </row>
         <row class="d-flex justify-content-center  pt-5">
-            <form action="login_verify.php" method="POST" class="col-3">
+
+            <form action="edit_post.php" method="POST" class="row justify-content-center">
                 <div class="row pt-3">
                     <label class="form-label">
-                        Email
-                        <input type="text" class="form-control" name="email" required>
+                        Tytył
+                        <?php
+                          echo '<input type="text" class="form-control" name="title" value= "' . $title . '" required>';
+                        ?>
                     </label>
                 </div>
-
                 <div class="row pt-3">
                     <label class="form-label">
-                        Hasło
-                        <input type="password" class="form-control" name="password" required>
+                        Treść
+                        <?php
+                         echo '<textarea class="form-control" name="content" required>' . $content . '</textarea>';
+                        ?>
                     </label>
-                </div>
-
-                <div class="d-flex justify-content-center align-items-center validation">
-                    <?php 
-                    if(isset($_SESSION['error'])) echo "<p class='error'>Nieprawidłowy login lub hasło</p>";
-                    ?>
-                </div>
-
-                <div class="d-flex justify-content-center pt-5 ">
-                    <button type="submit" class="btn btn-success btn-lg col-6">ZALOGUJ</button>
                 </div>
                 <?php
-                unset($_SESSION['error']);
+                  echo '<input type="hidden" name="id" value= "' . $id . ' " required>';        
                 ?>
+                <div class="d-flex justify-content-evenly pt-5 ">
+                    <a href="index.php" class="btn btn-danger btn-lg col-3">ANULUJ</a>
+                    <input type="submit" name="submit" class="btn btn-success btn-lg col-3" value="ZAPISZ">
+                </div>
             </form>
-            
         </row>
-
-
     </div>
 </body>
 </html>

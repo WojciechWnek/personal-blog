@@ -13,7 +13,7 @@ if(!isset($_SESSION['logged'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zaliczenie PHP</title>
+    <title>Daily Blog - Wojciech Wnęk</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
     
@@ -44,7 +44,7 @@ if(!isset($_SESSION['logged'])){
         </row>
         <row class="d-flex justify-content-center  pt-5">
 
-            <form action="save_post.php" method="POST" class="row">
+            <form action="add_post.php" method="POST" class="row justify-content-center">
                 <div class="row pt-3">
                     <label class="form-label">
                         Tytył
@@ -59,7 +59,6 @@ if(!isset($_SESSION['logged'])){
                 </div>
                 <div class="d-flex justify-content-center pt-5 ">
                     <input type="submit" name="submit" class="btn btn-success btn-lg col-6" value="ZAPISZ">
-                    <!-- <button type="submit" name="submit" class="btn btn-success btn-lg col-6">ZAPISZ</button>-->
                 </div>
             </form>
         </row>

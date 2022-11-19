@@ -39,9 +39,18 @@ CREATE TABLE `posts` (
 --
 
 INSERT INTO `posts` (`id`, `title`, `content`, `created_at`) VALUES
-(1, 'pierwszy', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', '2021-05-15 13:47:31'),
-(2, 'drugi', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', '2021-05-15 13:47:45'),
-(3, 'trzeci', 'wpis', '2021-05-15 13:50:46');
+(1, 'Pierwsza zwrotka', 'Kiedy rum zaszumi w glowie
+Cały świat nabiera treści,
+Wtedy chętnie słucha człowiek
+Morskich opowieści', '2022-11-17 12:07:25'),
+(2, 'Druga zwrotka', 'Kto chce ten niechaj słucha
+Kto nie chce, niech nie słuch
+Jak balsam są dla ucha
+Morskie opowieści', '2022-11-18 13:15:50'),
+(3, 'Trzecia zwrotka', 'Kto chce ten niechaj wierzy
+Kto nie chce, niech nie wierzy
+Nam na tym nie zalezy
+Więc wypijmy jeszcze', '202-11-19 13:50:46');
 
 -- --------------------------------------------------------
 
@@ -60,7 +69,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `email`, `password`) VALUES
-(1, 'jan', '$2y$10$S6xWh0c.qyCtOaV2KclwAOzQxnp2XKdM3KZgfgoADnd9nheFfm5yq');
+(1, 'wojciech@wnek.com', '$2y$10$IfzZVX7ml84Er3Pa5YZ45uPHsiAZuJQFc8Ur8V5qLTMx7oVThRytm');
 
 --
 -- Indeksy dla zrzutów tabel

@@ -29,7 +29,7 @@ if($conn->connect_errno!=0){
 
                 unset($_SESSION['error']);
                 $result->free_result();
-                header('Location: add_daily.php'); 
+                header('Location: add_post_page.php'); 
             }else{
                 $_SESSION['error'] = true;
                 header('Location: login.php');
